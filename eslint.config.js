@@ -7,8 +7,12 @@ module.exports = [
   ts.configs.eslintRecommended,
   prettier,
   {
+    ignores: ['lib/**'],
+  },
+  {
     languageOptions: {
       globals: {
+        console: true,
         exports: true,
         module: true,
         require: true,
