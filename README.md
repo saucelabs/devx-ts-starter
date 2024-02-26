@@ -1,2 +1,3 @@
 # devx-ts-starter
-Starter template for TypeScript projects
+
+Starter template for TypeScript projects.

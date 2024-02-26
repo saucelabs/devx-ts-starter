@@ -1,0 +1,46 @@
+{
+  "name": "devx-ts-starter",
+  "version": "0.0.1",
+  "description": "Starter template for TypeScript projects.",
+  "private": true,
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "build": "npx rimraf lib && tsc",
+    "test": "jest",
+    "lint": "prettier --check '**/*.{js,ts,mjs,cjs}' && eslint .",
+    "fmt": "prettier --write '**/*.{js,ts,mjs,cjs}'",
+    "prepare": "husky",
+    "release": "tsc && release-it --github.release",
+    "release:ci": "tsc && npm run release -- --ci --no-git.requireCleanWorkingDir",
+    "release:patch": "npm run release -- patch",
+    "release:minor": "npm run release -- minor",
+    "release:major": "npm run release -- major"
+  },
+  "author": "devx <devx@saucelabs.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.13.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "8.56.0",
+    "@jest/globals": "29.7.0",
+    "@tsconfig/node20": "20.1.2",
+    "@types/jest": "29.5.12",
+    "eslint": "8.56.0",
+    "eslint-config-prettier": "9.1.0",
+    "husky": "9.0.11",
+    "jest": "29.7.0",
+    "prettier": "3.2.5",
+    "pretty-quick": "4.0.0",
+    "rimraf": "5.0.5",
+    "ts-jest": "29.1.2",
+    "typescript": "5.3.3",
+    "typescript-eslint": "7.0.2"
+  }
+}
