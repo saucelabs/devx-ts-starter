@@ -2,16 +2,23 @@ const ts = require('typescript-eslint');
 const js = require('@eslint/js');
 const prettier = require('eslint-config-prettier');
 
-module.exports = [
+module.exports = ts.config(
   js.configs.recommended,
-  ts.configs.eslintRecommended,
+  ...ts.configs.recommended,
   prettier,
   {
     ignores: ['lib/**'],
   },
   {
+    files: ['*.js'],
+    rules: {
+      '@typescript-eslint/no-var-requires': 'off',
+    },
+  },
+  {
     languageOptions: {
       globals: {
+        __dirname: true,
         console: true,
         exports: true,
         module: true,
@@ -19,4 +26,4 @@ module.exports = [
       },
     },
   },
-];
+);
