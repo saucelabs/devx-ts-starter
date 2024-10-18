@@ -1,19 +1,19 @@
 // @ts-check
-import ts from 'typescript-eslint';
-import js from '@eslint/js';
-import prettier from 'eslint-config-prettier';
+import ts from "typescript-eslint";
+import js from "@eslint/js";
+import prettier from "eslint-config-prettier";
 
 export default ts.config(
   js.configs.recommended,
   ...ts.configs.recommended,
   prettier,
   {
-    ignores: ['lib/**'],
+    ignores: ["lib/**"],
   },
   {
-    files: ['*.js'],
+    files: ["*.js"],
     rules: {
-      '@typescript-eslint/no-require-imports': 'off',
+      "@typescript-eslint/no-require-imports": "off",
     },
   },
   {

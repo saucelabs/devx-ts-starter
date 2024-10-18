@@ -1,5 +1,5 @@
 export function helloWorld() {
-  return 'Hello World!';
+  return "Hello World!";
 }
 
 export interface Greeter {
@@ -8,6 +8,6 @@ export interface Greeter {
 
 export class HelloWorldGreeter implements Greeter {
   greet() {
-    return 'Hello World!';
+    return "Hello World!";
   }
 }
